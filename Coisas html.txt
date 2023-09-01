@@ -1,0 +1,870 @@
+ COMEÇO:
+Instalar os seguintes programas
+GIMP, visual estúdio code.
+gifhub e gif.
+
+
+Grouping tags
+
+PROGRAMAÇÃO INICIAL:
+<h1> = O título da página.
+<h2> = Subtítulo da página.
+<p> = Parágrafo.
+<hr> = Ele faz uma linha horizontal. Útil para separar parágrafos.
+<br> = Espaço. Já que o HTML não reconhece espaços sem isso.
+ &lt; = < Ex: &lt;p&gt;
+ &gt; = > Ex: &lt;p&gt;
+<meta charset="utf-8"> = pontos, virgulas, etc.EXTREMAMENTE NECESSÁRIO.
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> = Seu site vai ocupar 100% do espaço da tela.
+Elementos HTML5
+<div> = criar divisões.
+<header> = Cabeça da página.
+<main> = Corpo, parte principal.
+<section> = Definir uma seção na página.
+
+OBS: esses itens acima Servem para organizar a página no código.
+
+Grouping tags:
+<header> = introdução do site
+<nav> = para links
+<main> = conteudo "principal"
+<footer> = pé do site. Conteudo "Final"
+
+IMAGENS:
+<img src = "img/Chorao.jpg" alt="Chorão" = buscar imagem, img = nome da pasta, Chorao = nome da imagem, alt = Texto alternativo para deficientes visuais, por exemplo.
+O tamanho das imagens em um site importa bastante, pois imagens menores pesam menos e deixam seu site mais leve
+Programa recomendado GIMP.
+Imagens externas clicar com o direito em copiar endereço de imagem e colocar na tag mais acima.
+Imagens externas se o servidor da imagem cair a imagem vai desaparecer.
+IMAGENS QUE SE ADAPTAM:
+ Tag = <picture>
+<picture>
+        <source media="(max-width: 750px)" srcset="imagens/p.png" type="image/png">
+       <source media="(max-width: 1050px)" srcset="imagens/m.png" type="image/png">
+        <img src="imagens/g.png" alt="Imagem que muda">
+    </picture>
+Na Tag <picture> ela permite "controlar" o que acontece com a imagem, Na tag "source media" existe o max-width(OBS:Existem muito mais)
+no comando acima por exemplo estamos dizendo que caso o primeiro source media seja menor que 1050px ela vai carregar a imagem "m.png", caso seja 1050px ou 
+maior vai carregar a imagem "normal" ou seja a imagem "g.png", No segundo source media caso a imagem seja menor que 750px ou 750px á imagem muda para a "p.png"
+OBS:Na Tag Acima diz o seguinte ele sempre vai carregar a imagem padrão, 
+Mas caso à tela do seu navegador seja menor que 1050px(Ou seja se chegar a menos que 1050px ele vai mudar para a imagem "m") ele vai carregar a imagem "m".
+O mesmo se aplica para a imagem pequena caso a tela do navegador seja menor que 750px ou igual, ela vai mudar para a imagem "p"
+
+
+FAVICON:
+Favicon = Icone do site.
+https://iconarchive.com/search?q=html = site de Ícones Gratuitos NOTA: Quando for baixar por esse baixe em formato ".ico"
+https://www.favicon.cc/ = Site para fazer Ícones gratuitamente.
+https://favicon.io/ = Site para Transformar tudo em Ícone Ex: Texto em Ícone, Imagem em Ícone, Etc.
+<link rel="shortcut icon" href="html.ico" type="image/x-icon"> = Tag para adicionar o favicon "html.ico" pode ser qualquer nome de favicon que você tem.
+
+No Visual Studio Code Atalhos:
+Crtl + space = Vai abrir uma espécie de barra de pesquisa para achar um arquivo
+Digita uma tag sem "<" vai aparece várias opções da mesma tag
+Crtl + shift + p = Selecione alguma palavra, texto, etc.Depois usar os comandos falados anteriormente, logo após isso, clicar em Emmet: Envelope com a abreviatura. Com isso
+Digitamos a tag que queremos sem <> apenas o nome da tag selecionamos e pronto a tag vai aparecer no texto, palavra selecionada.
+Para mudar Varías tags, palavras ao mesmo tempo segura depois da letra que quiser apagar ou modificar, faça isso em todas as tags desejadas, segura Alt depois apagar. 
+Com isso vai apagar todas as tags selecionadas.
+
+
+
+Formatações(OBS: USE SEMPRE AS semânticas):
+    <b> = Negrito (Não semântica) EX: <p><b>Negrito com tag b(Não semântica)</b></p>
+    <strong> = Negrito (semântica) Ex: <p><strong> a tag "correta" (semântica)</strong></p>
+    <i> = itálico (Não semântica)  <p><i>Agora no itálico usando a tag I(Não semântica)</i></p>
+    <EM> = itálico (semântica) <p><EM>Nesta frase, temos a tag EM(semântica)</EM></p>
+    <mark> = Texto marcado  EX:OBS:(USADO A TAG STYLE) <p><mark = style="background-color: rgb(27, 209, 66);">texto marcado usando a tag MARK</mark></p>.
+   <big> = Texto grande Ex:<p>Estamos criando um <big>texto grande</big></p> (Não semântica)
+   <small> = Texto pequeno Ex:<p><small>pequeno aqui</small></p> (Não semântica)
+  <del> = texto deletado Ex:<p><del>Texto deletado</del></p> 
+  <ins> = Texto inserido Ex:<p><ins>Texto inserido</ins>(semântica OBS: = Sublinhado)</p>
+  <u> = Sublinhado Ex: <p><u>Sublinhado</u> (Não semântica)</p>
+  <sup> = Texto sobrescrito <p>Para inserir coisas como x<sup>20</sup>+3 ( O 20 fica Escrito acima do x e do +3)</p>
+  <sub> = Texto subscrito Ex: <p>Para inserir coisas como H<sub>2</sub>0( O 2 fica Escrito abaixo do H e do 0</p>
+  <code> = Usado para representar Codigos no seu site Ex <code>document.getElementById('teste')</code>, com isso cada letra do código ocupara o mesmo espaço. OBS nesse código ele vai juntar tudo, ou seja, não sera organizado
+  <pre> = Usado para "organizar" o código muito para ser usado com a tag <code> OBS Nessa tag TUDO sera levado em consideração como espaços, etc.
+  <q> = Usado para citacoes simples Ex <q>o dia sera ruim</q> OBS Essa tag adicionar "" automaticamente mas so deve ser usada em citacoes, Alem disso ele nao da espaco.
+  <blockquote> = Usado para citacoes complexas Ex Com lorem <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, eligendi voluptatibus<blockquote> OBS Essa tag tem quebra-de-linha e deslocamento horizontal para a direita.
+     *Variacao de <blockquote> = <blockquote cite="AlgumLinkOuOutraCoisa"> OBS nao aparece visualmente, mas os mecanismos de busca vao saber que a sua citacao vem desse link.
+  <abbr> = Usado para abreviações Ex <abbr title="hypertext markup language">HTML</abbr> OBS Quando passar o mouse naquilo com essa tag vai aparecer oque esta escrito em title.
+  <bdo> = Texto invertido Ex <bdo dir="rtl" >Texto invertido</bdo>s
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+HIERARQUIA DE TÍTULOS:
+   <h1></h1> Primeiro Título
+  <h2></h2> Segundo Título
+   <h3></h3> Terceiro Título
+    <h4></h4> Quarto Título
+    <h5></h5> Quinto Título
+     <h6></h6> Sexto Título
+Tags "h" por hierarquia de Título. OBS: A tag "h" Vai apenas até o "h6".
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+VÍDEOS E MUSICAS:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qvIxcvqYbf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> = 
+Usado para vídeos no seu site o próprio ytb da esse código em compartilhar/Incorporar
+
+
+video = <video src="Mi/NOVA SKIN DO AURELION SOL_.mp4 " width="500" controls></video>  = Video hospedado no meu próprio site   width = tamanho do video no site 
+ OBS: esse método usa muito gigas por mês o que sai no bolso do seu cliente melhor método é o ytb ou outro site de vídeos, por exemplo:Vimeo.
+
+<video width="500" poster="imagens/thumb.png"  controls>            Aqui temos varios vídeos de diferentes formatos com ordem de prioridade, caso o navegador não consiga carregar o primeiro tentara o segundo assim por diante.
+        <source src="midia/meu-video.ogv.ogv" type="video/ogv">       width="500" = tamanho do vídeo.
+        <source src="midia/meu-video.mp4.mp4" type="video/mp4">       poster="imagens/thumb.png" a thumb que vai aparecer antes do vídeo começar.
+        <source src="midia/Meu-Video.webm.webm" type="video/webm">
+        <source src="midia/Meu-Video.m4v.m4v" type="video/m4v">
+    </video>
+
+audio = <audio src="Au/Welcome To The Show.mp4" controls autoplay></audio>  controls = aparece os controles do audío, autoplay = tocar automaticamente
+Abaixo outro método de usar a Tag "audio":
+<audio preload="auto" controls>
+        <source src="midia/Slow Times Over Here - Midnight North.mp3" type="audio/mpeg">
+        <source src="midia/Slow Times Over Here - Midnight North.ogg" type="audio/ogg">
+        <source src="midia/Slow Times Over Here - Midnight North.wav" type="audio/wav">
+    </audio>
+Parecido com as imagens ditas acima do documento nessa tag audio os sources tem ordem de prioridade, caso o navegador não consiga 
+carregar o primeiro tentara o segundo assim por diante.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Simbolos especiais e emojis:
+&reg;
+&copy;
+&trade;
+&euro;
+&pound;
+&yen;
+&cent;
+&Delta;
+&uparrow;
+&uarr;
+Acima alguns exemplos de símbolos comercias.
+Emojis:
+&#x1F44D; 
+"Ponto importante emojis SEMPRE começam com &#x e terminam com;" Exemplo acima.
+
+Listas(OBS: Todas as listas podem ser misturadas sejam elas <ol> ou <ul>):
+
+<ul> = lista não ordenada 
+Exemplo:
+ <ul>
+   <li>
+</ul>
+   
+<li> = item da lista
+<ol> = lista ordenada OBS: Para personalizar sua lista, faremos o seguinte <ol type="AlgumaOpção" start="4"> start = ela vai começar no número 4.
+
+<d1> = lista de definição Ex: 
+<d1> 
+  <dt>Termo</dt>
+  <dd>Descrição do termo</dd>
+</d1>  Nesse Exemplo a palavra "Termo" Ficará acima da "Descrição do termo" enquanto a Descrição ficara abaixo para o lado direito.
+
+
+Links:
+<a href=""></a> = links juntos em alguma palavra, número, etc.
+ Exemplo:
+<a href=":http://AlgumSiteQualquer">NomeDoSiteOuQualquerElementoHtmlComoImagensEtc</a> 
+ *OBS: Para links que abrem outra guia usamos <a href=":http://AlgumSiteQualquer" target="_blank" rel="external">NomeDoSite</a> <----Site Externo
+  *OBS: Para links internos na mesma pasta apenas o nome basta.
+  *OBS: Para internos em outra pasta Faremos o seguinte -----> <a href="NomeDaPasta/NomeDoArquivo">NomeQualquer</a>
+    *OBS: A tag rel="", é muito importante não visualmente mas para mescanismos de busca, etc. Nela existem várias váriações Por Exemplo:rel="next", rel="prev", rel="external"      
+      Cada uma com objetivos diferentes, para dizermos que esse link vai para a próximo página interna usamos rel="next", para dizemos que vai voltar para a página interna usamos rel="prev"
+      rel="nofollow", Esse rel estamos dizendo para o mescanismo de busca que não damos aval para a página.
+      aval pode ser uma autorização, apoio moral ou intelectual em relação a algo ou alguém.
+  *OBS: <a href="../NomeDaPasta/NomeDoArquivo">NomeQualquer</a> = pasta anterior
+    OBS:./ = Própria pasta, ../ = pasta anterior Usamos dentro de "", antes do link
+   Para um link vazio usamos apenas "#", Exemplo: <a href="#">Link para o pdf</a>
+
+
+style = Estilo como: Fonte, Tamanho da fonte, cor, etc.Exemplo:<h1 style="font-size: 70 px">. px = pixels. 
+Mais propriedades na mesma linha com ";"exemplo:<h1 style="font-size: 70 px; color: blue">
+
+
+
+Tabelas
+Hieraquia
+<table> = tabela.
+  table row = linha da tabela.  =  <tr>
+   table header = cabeçalho da tabela. <th>
+   table data = dado da tabela. = <td>
+<caption> = Legenda da tabela.
+scope="row" = Counteudo na mesma linha. Ex: <th scope="col"> Estado</th>
+scope="col" = Conteudo na mesma coluna. Ex: <th scope="row">Total de Habitantes</th>
+
+
+Tabelas grandes anatomia
+        TABLE
+          <caption>
+           THEAD
+               TR, TD, TH
+           TBODY
+                TR, TD, TH
+           TFOOT
+                 TR, TD, TH]
+
+tbody > tr:nth-child(2n) = Filho do "tr" a cada dois vai ficar com a cor abaixo. pode ser usada para muitas outras coisas.
+Explicado melhor abaixo em pseudo-classe.
+
+
+thead fixo quando rolar na página:
+dentro de style:
+table{
+position: relative; = Essa configuração é necessaria para a de baixo dar certo.
+}
+thead > tr > th{
+            position: sticky;
+            top: -1; = Coloquei menos um apenas para não ficar uma bordinha branca em cima.
+            background-color:gray;
+        }
+ou
+
+thead  {
+    position: sticky;
+    top: -1px;
+}
+
+Mesclagem de células
+ <td colspan="2">B</td> = Expansão de colunas, no caso aqui "2". Agora "B" ocupa duas colunas.
+ <td rowspan="3">F</td> = Expansão de linhas, no caso aqui "3". Agora "F" ocupá duas linhas.
+
+
+scopo
+Não aparecerem visualmente.
+ th colspan="4" scope="row = Relativo a apenas uma coluna.
+ th colspan="3" scope="colgroup" = Relativo a quatro colunas.
+
+Agrupando colunas
+colgroup>             
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+O próprio HTML espefica a coluna exata. Mesmo que o nome entre aspas seja diferente da coluna.
+Pode ser usado com span Ex: <col class="cnome" span="3">
+
+
+
+iframe = tem tamanho padrão 300x150px
+<iframe src="https://www.cursoemvideo.com" frameborder="0">
+                                                                = esse espaço entre a tag aparece apenas para navegadores que não são compativeis com iframe.
+</iframe>= iframe é como uma janela em inline, que pode exibir outros sites. 
+
+
+<a href="pags-extras/pag001.html" target="frame"> = um link junto com iframe, quando clicado no link, na tag iframe vai aparecer esse link. Mais para isso o iframe precisa de uma tag "name".
+Ex: <iframe src="" id="tela" name="frame"> = o "frame" pode ser qualquer nome.
+
+<iframe src="" id="tela" name="frame" srcdoc="<h1> escolha uma opção acima</h1>"> = parametro srcdoc="", ele carrega html como no exemplo ao lado.
+
+
+iframes mais seguros
+sandbox="sandbox" = bloqueia o acesso que outros site dentro do iframe tentem fazer Ex:O cadastro de pessoas. Resumindo vc não captura informações.
+Ex:
+<iframe src="pags-extras/pag004.html" frameborder="0" sandbox="sandbox">
+        Error
+       </iframe>
+
+sandbox="allow-same-origin allow-forms allow-scripts" = permitindo coisas da mesma origem, uso de formularios, uso de scripts.
+
+referrerpolicy="no-referrer" = quando  você coloca isso aqui você diz, 
+que o que está carregado dentro do iframe não vai coletar dados de informações.
+
+CSS:
+
+
+dentro de "head" digitar OBS: Esse código abaixo é a mesma coisa que CSS que bem pior
+<style type="texte/css"> 
+
+h1{
+font-size: 70px;
+color: blue;
+}
+
+</style>
+
+Dentro de "style" primeiro colocamos o nome do elemento que queremos selecionar como no exemplo acima em "style" abrir e fechar chaves dessa maneira "{}".
+Nunca escrevemos CSS com propriedades em linha caso contrário fica difícil de ler depois.
+Terminar o que está escrito com ";".
+Essa maneira acima não e o melhor jeito, pois funciona em apenas uma página por vez.
+
+
+text-align: justify;= Tag para organizar seu texto Ex:
+p{
+ text-align: justify;
+  }
+vertical-align:top; = Alinhamento vertical.
+       
+Melhor maneira criar outra pasta dentro dessa pasta um arquivo ".css" nas páginas do seu projeto digita o comando => <link rel="stylesheet" type="text/css" href="css/style.css"> 
+Dentro de href/NomeDaPasta/NomeDoArquivo.css
+Depois podemos colocar tudo isso na nossa pasta em CSS.
+Classes
+As classes servem para diferencia elementos EX: <div>Teste1</div> <div>Teste2</div> exemplo de como usar abaixo
+<div class="NomeQualquer">Teste1</div>
+<div class="NomeQualquer2">Teste2</div>
+Como acessar as classes em CSS
+.NomeQualquer{
+}
+Para acessar apenas um elemento de uma classe específica usamos, por exemplo: header.Top-Text{} significado desse comando: queremos usar a classe Top-Text que está dentro do header.
+Para ser ainda mais específico EX; header .Top-Text a {} Assim acessamos apenas links dentro de header com a classe Top-Text.
+
+
+CSS tags básicas:
+width = Largura, pode ser alterado Na própria página da web com click no botão direito em inspecionar sem a necessidade de programas ou bloco de notas EXEMPLO:width: 850px
+margin: = lado do conteúdo Espaço fora do elemento OBS: afasta o conteúdo. pode ser negativo Ex:margin: -10px -10px 0px -10px; util para certas coisas.
+padding: = Adicionar espaço ao conteúdo Ex: 20px OBS: "margin: auto;" = centralizar conteudo
+text-align: center = Alinhamento de especificamente texto.
+No CSS em 
+body {
+font-family: sans-serif;
+} = Essa fonte tira as pontinhas das letras
+border-radius: = "arredondar quadrados" EX:border-radius: 10px;
+vertical-align:top; = Alinhamento vertical.
+ text-align: justify;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CSS tags importantes
+ "*" = configuração global para todas as CSS
+background-attachment: fixed; = manter o fundo fixo. util para degradê por exemplo porque mesmo rolando a página a tag mantém o degradê fixo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CORES/Gradiente:
+Em CSS existem vários jeitos de cores sendo elas:
+ rgb
+ hsl
+#0000ff = Algoritmos
+Degradê em CSS
+Ferramenta de apoio color.adobe.com
+Um degradê(Gradiente) de cores é a passagem sutil de um tom escuro para um tom mais claro. Ou também pode ser a passagem de uma cor para a outra.
+Usando a tag background-image: linear-gradient Ex:
+ background-image: linear-gradient(to right, white, blue); = to right para a direita, no caso da esquerda começa branco e indo pra direita fica azul. Essa tag está sujeita a várias alterações. 
+tambem angulos podem ser usados EX:90Graus em vez de to right. também depois de falar a cor pode ser colocado uma "%", para definir a porcetagem da tela que a cor vai ocupar EX:"#303C6B 80%",
+   Nota:Existem várias variaçoes das direçoes das cores podendo ser mudado livremente até mesmo para cima e para baixo
+   Nota02: É possivel que se a tag usar "to top" ex: "linear-gradient(to top, white, blue)". vai ficar zebrado, separado em outro palavras. Para resolver isso é possivel usar "*{
+}" para tag global dentro disso usar "height: 100%;", = altura igual a 100%. 
+ 
+
+
+
+
+
+Fontes////////////////////////////////////////////////////////////////////////////////////////////////////////
+medidas absolutas (cm, mm, in, pt, px, pc) e relativas (em, ex, rem, vh, vw, %) 
+
+font-family: sans-serif = Familia da fonte OBS:sans-serif é apenas um exemplo de fonte.
+
+font-weight = peso da fonte OBS: Nem todas as fontes permitem mudar o peso delas.
+Definições padrões dessa tag são lighter, normal, bold, bolder = Aumenta a grossura da fonte
+
+font-style: = varia em normal e italic
+
+font-size: OBS:use "em" e "px"
+
+
+text-decoration: underline = Sublinhado
+text-decoration: none; = Tirar o Sublinhado
+
+
+shorthand das fontes das tags acima Ordem: font-style -> font-weight -> font-size -> font-family
+
+font: font-style -> font-weight -> font-size -> font-family;  Ex:font:italic bolder 3em 'Work Sans', sans-serif;
+
+
+Site de fontes : Google fonts
+ Selecione uma fonte e importe para o CSS Ex:
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+Exemplo de utilização na pratica:
+font: 48px 'Kaushan Script', cursive;
+
+
+
+Fontes baixadas TAG: @font-face Ex:
+@font-face {
+            font-family:'love' ; = Nome da fonte. Pode colocar o nome que vc quiser.
+            src: url('love larry.ttf') format('truetype'); = Nome da fonte entre aspas.
+            font-weight: normal;
+            font-style: normal;
+        }
+
+Tipos de format 
+-opentype = otf
+-truetype = ttf
+
+font-family: ;
+            src: url('love larry.otf') format('opentype'), url('love harry.ttf') format('truetype'); = Usando outra url
+
+Pegando a font em outra pasta Ex:
+@font-face {
+            font-family:'love' ; = Nome da fonte. Pode colocar o nome que vc quiser.
+            src: url('NomeDaPasta/love larry.ttf') format('truetype'); = Nome da fonte entre aspas.
+            font-weight: normal;
+            font-style: normal; 
+
+
+
+
+
+Seletores
+em HTML é id = em CSS é "#"
+Em HTML é class = em CSS é "."
+Pseudo-classes = Estado do objeto ":"
+Ex: div:hover{}
+tbody > tr:nth-child(2n) = Filho do "tr" a cada dois vai ficar com a cor abaixo.
+{                    
+background-color: beige;
+        }
+Pseudo-elementos = "::"
+Ex:a::after
+
+
+
+
+id Ex: <h1 id="principal">
+ CSS ex:h1#principal = Selecionar h1 com o id principal "#"  ou apenas "#principal{}"
+
+IMPORTANTE: "class" é o unico que pode ter multiplos com a mesma classe. id apenas um objeto com essa id.
+Uma tag pode ter mais de uma classe EX: <h1 class="destaque avançado"> = tag com duas classes
+
+
+IMPORTANTES:
+
+width: 200px; = Largura
+height: 200px; = Altura
+display:inline-block; = Tudo na mesma linha. caixa se adapta ao tamanho do conteudo.
+
+
+Pseudo-classe e elementos
+active = Quando foi ativado.
+hover = quando o mouse passar por cima.
+visited = Se um site foi Visitado.
+Pseudo-elemento:after = Depois.
+Pseudo-elemento:before = Antes.
+tbody > tr:nth-child(2n) = Filho do "tr" a cada dois vai ficar com a cor abaixo.
+{                    
+background-color: beige;
+        }
+
+">" = Filho o que estiver dentro. Exemplos abaixo
+
+
+hover = quando o mouse passar por cima;
+
+EX:
+ div:hover{                             = Quando o mouse passar por cima a "div" fica amarela.
+        background-color: yellow; 
+      }
+
+ div > p = Ele so vai mecher num paragrafo que estiver dentro dessa "div".
+Ex: 
+div >p{
+            display: none;  = O paragrafo que estiver dentro dessa Div não vai aparecer devido ao "display:none;".
+        }
+
+div:hover > p {                     
+               display: block; = O paragrafo que estiver dentro dessa "div" vai aparecer devido a tag "display: block;", quando passar o mouse em cima.
+               color: white;
+               background-color: red;
+                }
+
+visited = Se um site foi Visitado
+
+Ex:
+a:visited{
+            color: darkred;
+        }
+Ex: Personalização de link
+a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+active = Quando foi ativado.
+
+Ex:
+
+    a:active{                     = Quando o link for clicado fica amarelo.
+            color: yellow; 
+        }
+
+
+after = Depois.
+
+Ex: 
+
+a::after{
+            content: '[link]';  = Depois do link, Vai aparecer o nome "[link]". Com a tag "content".
+        }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SOMBRAS e BORDAS e transição
+box-shadow;
+Ex:
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+border-radius;
+Ex:
+border-radius: 20px;
+border-collapse: collapse; = junta a linhas das bordas.
+
+transition-duration: 0.5s; = Transiçoes duram "0.5s" Ex: Quando passar o mouse em cima demora 0.5s pra a transição Acontecer.
+OBS: Causar um efeito legal quando carrega a página.
+
+
+Variáveis em CSS
+:root{ = tudo definido aqui vale para o documento inteiro.
+
+}
+
+Ex
+:root{
+    --cor0: #c5ebd6;  = "cor0" virou essa cor, no documento.
+    --cor01: #83e1ad;
+    --cor02: #3ddc84;
+    --cor03: #2fa866;
+    --cor04: #1a5c37;
+    --cor05: #063d1e;
+
+}
+
+PARAGRAFOS e listas comandos uteis
+text-indent: 30px; = Espaço no começo de cada pragrafo.
+line-height: 1em; = espaço entre cada linha do paragrafo.
+text-indent:20px; = Paragrafo com um pequeno espaço no começo.
+LISTAS
+list-style: inside; = bolinhas da lista dentro.
+ columns: 2; = lista dividida em duas colunas.
+
+
+Gambiara pra colocar vídeo no meio da pag
+div.video{
+    background-color: var(--cor05);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+div.video > iframe{
+position: absolute;
+top: 5%;
+left:5%;
+width:  90%;
+height: 90%;
+}
+
+IMAGENS DE fundo:
+background-image: url("imagens/pattern001.png"); = Tag da imagem de fundo.
+  background-size: = tamanho da imagem de fundo.
+ background-repeat: no-repeat; = assim ele não repetir a imagem.
+background-position: left bottom; = posição da imagem.
+background-size: cover; = Vai cortar a imagem. Mais vai preecher a tela inteira.
+background-size: countain; = a imagem é 100% exibida, com laterais vazias as vezes.
+ background-attachment: fixed; = Util para manter o fundo fixo e não quebrar a imagem.
+shorthand: "color > image > position > / > size > repeat > attachment."
+Ex: background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+
+
+background-size: cover; = Também util e necessario para fazer feito paralax.
+
+POSITION e transform
+position: relative; Normalmente usado em o que contem. Fora
+position: absolute; Normalmente usado em o que está contido. Dentro
+
+
+Essas configurações permitem usar Centralização vertical das caixas.
+
+position: absolute; = da acesso as tags.
+left: 100px;
+top: 200px;
+
+position: relative; = da acesso as tags.
+position: sticky;
+
+
+transform: translate(-50%, -50%); = move o objeto. Passo importante pra centralização de caixas.
+
+
+Conteudo transbordando
+overflow-x: auto; = overflow = Conteudo transbordando.
+overflow: hidden; = tudo que tive fora da borda fica escondido.
+Ex:
+div#container{
+            overflow-x: auto; = no caso aqui ele vai adaptar e a rolagem no eixo x vai ser apenas na div e o resto da página não.
+        }
+
+Formulários e label
+
+<form action="cadastro.php" autocomplete="off">  = "action" essa ação vai ser disparada quando clicar em submit(Enviar). Vai enviar o dado para o aquivo php no caso. autocomplete="off" não vai sugerir completações.
+        <p>Nome: <input type="text" name="nome" id="nome"></p> = Existem vários inputs como esse por exemplo do tipo "text"
+        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>   = esse do tipo submit, "value" é o que está escrito e o que vai aparecer na tela.
+      </form>
+
+<label>  a tag não muda nada visualmente, mais é crucial para Formularios, para relacionar o nome com o input Ex:
+ <form action="cadastro.php"autocomplete="off">
+        <p><label for="nome">Nome:</label> <input type="text" name="nome" id="nome"></p>  = "for" do label é o id do elemento no caso aqui "nome."
+        <p><label for="sobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+      </form>
+
+method="post" = metodo de segurança nos formulários, com isso na url não vai aparecer os dados do formulário, mas vai continuar acessivel com certos metodos.
+<input type="password" name="sen" id="isen"> = do tipo senha.
+
+
+<input type="reset" value="Limpar"> = limpar o que escrevi.
+
+
+
+p>
+        <label for="iusu">Usuário:</label>
+        <input type="text" name="usu" id="iusu" required>  = "required" não vai deixar enviar, sem preencher este campo.
+        
+ </p>
+
+
+<p>
+        <label for="iusu">Usuário:</label>
+        <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10"  placeholder="Nome do Usuário" autocomplete="username"> = (minlength="5", maxlength="15") não 
+vai deixar enviar se não tiver no minimo 5 letras e no maximo 15 letras. 
+"size" = é igual ao número de letras que ele vai mostrar. 
+placeholder"" = vai aparecer no input clarinho o que está escrito entre as aspas. autocomplete="" = ele vaí sugerir nomes usados anteriormente. 
+O autocomplete precisa está on no form.
+        
+     </p>
+     <p>
+        <label for="isen">Senha:</label>
+        <input type="password" name="sen" id="isen" required minlength="8" autocomplete="current-password" min="0" max="10"> = mesma coisa explicada acima. min e max são para limitar os números aqui no caso ele só vai aceitar 0 pra cima.
+     </p>
+
+
+<p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" value="5"> = 
+sem o step ele não vai aceitar números com pontos Ex:0.5. "step" é o passo que a nota vai mudar.
+  value= ele vai sugerir algum valor ou alguma coisa. O número 5 por exemplo.
+        </p>
+pattern="^[0-9]{4}-[0-9]{4}$"> = Padrão em um formulário. Sempre com "^" e termina com "$", [0-9] ou "\d" ele vai ler digitos, assim ele so vai aceitar se for "4 digitos - 4 digitos".
+pattern="^[0-9]{4,5}-[0-9]{4}$"> = de 4 a 5 digitos no começo.
+pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$"> = aqui ele so aceitar com ddd.    "\(" = abri pareteses.
+
+
+
+<fieldset>   = vai colocar os dados com uma borda em volta.
+<legend>Dados pessoais</legend> = vai botar uma legenda logo abaixo.
+
+
+<fieldset> 
+        <legend>Dados pessoais</legend>
+        <p>
+            <label for="iemael">E-mail</label>
+            <input type="email" name="email" id="iemael" autocomplete="email" required></p>
+        <p>
+              <label for="itel">Telefone</label>
+              <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(xx) xxxx-xxxx">
+        </p>
+    </fieldset>
+Exemplos de input
+<input type="email" name="email" id="iemael" autocomplete="email" required>
+<input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(xx)xxxx-xxxx">
+<input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1"  value="5"required>
+<input type="month" name="mes" id="imes" value="2020-07">
+<input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="Nome do Usuário" autocomplete="username"> 
+<input type="password" name="sen" id="isen" required minlength="8" maxlength="22" autocomplete="current-password">
+
+
+<input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Basquete</label> = checkbox caixinha para vc marcar.
+
+legend>Sexo</legend>
+        <input type="radio" name="sexo" id="isxmas"> = input tipo "radio", bolinha pra marcar. Os dois sexos masculino e feminino os dois precisam ter o mesmo "name", pois assim so poderei marcar um por vez, sem isso é possivel marcar os dois.
+         <label for="isxmas">Masculino</label>
+        <input type="radio" name="sexo" id="isxmm" checked> = "checked" já vai aparecer marcado.
+        <label for="isxmm">Feminino</label>
+
+<label for="ifoto">Foto do perfil</label>  
+    <input type="file" name="foto" id="ifoto"> = enviar arquivos. OBS: Com esse input use sempre o method "POST" para ele enviar os arquivos para o lugar certo.
+
+
+
+Resumo formulário:
+ "checked" já vai aparecer marcado
+ autocomplete="off" = desativar autocompletação
+ esse do tipo submit, "value" é o que está escrito e o que vai aparecer na tela.
+"step" é o passo que a nota vai mudar.
+value= ele vai sugerir algum valor ou alguma coisa. O número 5 por exemplo.
+(minlength="5", maxlength="15") não vai deixar enviar se não tiver no minimo 5 letras e no maximo 15 letras. 
+"size" = é igual ao número de letras que ele vai mostrar. 
+placeholder"" = vai aparecer no input clarinho o que está escrito entre as aspas. 
+autocomplete="" = ele vaí sugerir nomes usados anteriormente. O autocomplete precisa está on no form.
+"required" não vai deixar enviar, sem preencher este campo.
+min="0" max="10"> =  min e max são para limitar os números aqui no caso ele só vai aceitar 0 pra cima.
+
+
+Formulários sem input
+
+<form action="" method="get">
+         <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">   = lista de seleção
+                <optgroup label="Região sudeste"> = grupo da lista
+                    <option value="Sp" se>São Paulo</option> = item da lista
+                    <option value="Minas gerais" selected>Minas Gerais</option>
+                    <option value="Rj">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="Ma">Maranhão</option>
+                    <option value="Pe">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+         </p>
+         <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="istprof">
+            <datalist id="istprof"> = vai aparecer sugestões dessas profissões no input
+                <option value="ADM">Administrador</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+         </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <p>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>  = aréa para mandar mensagem.
+        </p>
+    </form>
+
+
+output = o usuário não pode interagir
+<p><label for="isoma">Soma:</label></p>
+           <output id="isoma">0</output>
+      <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+           </p>
+
+
+JAVASCRIPT
+
+<form action="" method="get">
+      <p>
+        <label for="in1">Número 1:</label>
+        <input type="number" name="number" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> = A soma vái aparecer no output.
+      </p>
+      <p>
+        <label for="in2">Número 2:</label>
+        <input type="number" name="number" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> = A soma vái aparecer no output.
+      </p>
+
+
+
+      
+      <p><label for="isoma">Soma:</label></p>
+           <output id="isoma">0</output>
+      <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+           </p>
+    </form>
+
+
+MIDIA QUARY
+<link rel="stylesheet" href="estilos/tela.css" media="screen"> = link do css para tela.
+ <link rel="stylesheet" href="estilos/impressora.css" media="print"> = link do css para impressora.
+
+<link rel="stylesheet" href="estilos/style.css" media="all"> = configuração global.
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)"> = orientation: portrait PRECISA estar dentro de "()", 
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+
+As configurações acima também podem ser feitas "resumidas":
+@media screen and (orientation: portrait)
+      {
+            body{
+                background-image: url(imagens/cev-portrait.jpg);
+                background-position: center bottom;
+    }
+  }
+
+    @media screen and (orientation: landscape)
+    {
+        body{
+            background-image: url(imagens/cev-landscape.jpg);
+            background-position: left bottom;
+           }
+    }
+
+Medias Queries (break points):
+/* Extra small devices (phones, 600px and down) */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/* Medium devices (landscape tablets, 768px and up*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+exemplos:
+OBS: Aqui foi feito usando mobile first ou seja não é necessario colocar tamanho da tela de celular já que o site já foi feito pensando nele.
+
+
+@media print{
+
+}
+
+@media screen  and (min-width: 768px) and (max-width: 992px) {
+
+    
+}
+
+@media screen  and (min-width: 992px) and (max-width: 1200px) {}
+
+@media screen and (min-width: 1200px){}
+
+
+
+
+POSICIONAMENTO
+float = Especifica como uma caixa deve flutuar. 
+Pode ser definido para qualquer elemento, mas só se aplica a elementos que geram caixas que não estão 
+absolutamente posicionadas.
+Ex: 
+
+section#login > div#imagem{
+   float: left; = esquerda
+   width: 30%;
+   height: 100%;
+
+  }
+
+section#login > div#formulario{
+  float: right; = direita
+  width: 70%;
+  }
+
+Para relembrar:
+transition: width 1s, height 1s; = vai gerar uma animação de 1s no width e height.
+transition-timing-function: ease; = vai suavizar a animação.
+cursor: pointer; = quando passar o mouse vai aparecer para clicar.
+form > input[type=submit]:hover{ = seletor especifico
+    background-color: #2f6664;
+}
+
+width: calc(100% - 44px); = calcular certas coisas
+
+div.campo > input:focus-within{   = a caixa que tá com foco fica branca ou seja quando clicar.
+    background-color: white;
+}
+
+
+Nota importante sempre translate e animações ficam na ultima linha
+para evitar problemas
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+

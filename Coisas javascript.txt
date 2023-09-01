@@ -1,0 +1,69 @@
+
+"=" = recebe.
+"null" = nada.
+"var" = variaveis.
+"typeof" = mostrar o tipo de var.
+ "+" serve para juntar as coisas.
+"Number.parseInt" = converter uma string para número inteiros . Sem virgula etc..
+"Number.parseFloat" = converter uma string para número que podem ser "quebrados". Com vírgula etc..
+"Number(n)" = serve para os dois. ou seja o javascript decide se é int ou float.
+"String(n)" = converter número para string.
+"${}" = placeholder. Dentro de '{}' coloca-se uma váriavel.
+
+
+ window.alert('Minha primeira mensagem!') = primeiro comando em javascript
+ vai mostrar uma mensagem com os dizeres entre 'aspas'.
+
+window.confirm('Está gostando?')
+vai mostrar uma mensagem para confirmar ou cancelar.
+
+
+window.prompt('Qual é seu nome?')
+vai mostrar um input perguntado o nome   OBS: Sempre retorna uma string mesmo que você digite um número.
+
+
+      var n1 = Number.parseInt (window.prompt('Digite um número: ')) 
+      var n2 = Number.parseInt(window.prompt('Digite outro número: ')) 
+      var s = n1 + n2
+      window.alert('A soma dos valores é' + s)  =uma soma usando conceitos básicos.
+
+
+      var n1 = Number(window.prompt('Digite um número: ')) // string
+      var n2 = Number(window.prompt('Digite outro número: ')) // string
+      var s = n1 + n2
+      window.alert('A soma dos valores é' + s)
+
+Variáveis:
+
+Como Criar variáveis, Ex: var nome ou let nome
+
+para uma variável receber um valor usamos var nome = Gustavo (desta forma criamos uma variável e ao mesmo tempo demos uma valor a ela) 
+
+nome = Gustavo (desta forma apenas demos um valor para a variável )
+
+Regras das variáveis:
+Podem começar com: Letra, $ ou _
+Não podem começar com números 
+É possível usar letras ou números
+É possível usar  acentos e símbolos 
+Não pode conter espaços 
+Não pode usar palavras que são comandos
+
+Dicas para nomes das variáveis: 
+Maiúsculas e Minúsculas fazem a diferença!
+Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade, coloca o nome dela de “idade”
+Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
+
+Tipos de Dados das Variáveis: (Tipos Primitivos, lembrando que existem muitas outras!)
+
+Numbers;
+Strings;
+Boolean;
+
+Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
+Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
+Boolean: True; False ->
+
+
+var nome =  window.prompt('Qual é seu nome?') = "var" recebendo o nome do prompt.
+window.alert('É uma grande prazer conhecer você,'+ nome) = o nome não ficar dentro de aspas, "+" serve para juntar as coisas.
